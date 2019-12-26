@@ -14,20 +14,12 @@
 **Contents:**
 - [1. Algorithm](#1-algorithm)
 - [2. Install Dependency (OpenPose)](#2-install-dependency--openpose-)
-- [3. Program structure](#3-program-structure)
-  * [Diagram](#diagram)
-  * [Main scripts](#main-scripts)
-- [4. How to run: Inference](#4-how-to-run--inference)
+- [3. How to run: Inference](#4-how-to-run--inference)
   * [Introduction](#introduction)
   * [Test on video file](#test-on-video-file)
   * [Test on a folder of images](#test-on-a-folder-of-images)
   * [Test on web camera](#test-on-web-camera)
-- [5. Training data](#5-training-data)
-  * [Download my data](#download-my-data)
-  * [Data format](#data-format)
-  * [Classes](#classes)
-- [6. How to run: Training](#6-how-to-run--training)
-- [7. Result and Performance](#7-result-and-performance)
+
 
 
 
@@ -147,36 +139,8 @@ python src/s5_test.py \
     --output_folder output
 ```
 
-# 4. Training data
 
 
-## Download our data
-Follow the instructions in [data/download_link.md](data/download_link.md) to download the data. Or, you can create your own. The data and labelling format are described below.
-
-## Data format
-
-Each data subfolder (e.g. `data/source_images3/jump_03-02-12-34-01-795/`) contains images named as `00001.jpg`, `00002.jpg`, etc.   
-The naming format of each image is defined in [config/config.yaml](config/config.yaml) by the sentence: `image_filename_format: "{:05d}.jpg"`.
-
-The images to be used as training data and their label are configured by this txt file: [data/source_images3/valid_images.txt](data/source_images3/valid_images.txt).  
-A snapshot of this txt file is shown below:
-```
-jump_03-02-12-34-01-795
-52 59
-72 79
-
-kick_03-02-12-36-05-185
-54 62
-```
-In each paragraph,  
-the 1st line is the data folder name, which should start with `"${class_name}_"`. 
-The 2nd and following lines specify the `staring index` and `ending index` of the video that corresponds to that class.
-
-Let's take the 1st paragraph of the above snapshot as an example: `jump` is the class, and the frames `52~59` & `72~79` of the video are used for training.
-
-## Classes
-
-The classes are set in [config/config.yaml](config/config.yaml) under the key word `classes`. No matter how many classes you put in the training data (set by the folder name), only the ones that match with the classes in **config.yaml** are used for training and inference.
 
 
 
