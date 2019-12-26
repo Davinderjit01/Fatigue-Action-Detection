@@ -1,11 +1,6 @@
 
 # Multi-person Action recognition-Fatigue detection
-
-
-**Highlights**: 
-9 actions; multiple people (<=5); Real-time and multi-frame based recognition algorithm.
-
-**Updates**: On 2019-10-26, I refactored the code; added more comments; and put all settings into the [config/config.yaml](config/config.yaml) file, including: classes of actions, input and output of each file, OpenPose settings, etc. 
+ 
 
 
 
