@@ -26,13 +26,13 @@ We collected videos of 9 Types of actions: `['stand', 'walk', 'run', 'jump', 'si
 The workflow of the algorithm is:
 *  Get the joints' positions by [OpenPose](https://github.com/ildoonet/tf-pose-estimation).  
 *  Track each person. Euclidean distance between the joints of two skeletons is used for matching two skeletons. 
-See `class Tracker` in [lib_tracker.py](utils/lib_tracker.py)
-*  Fill in a person's missing joints by these joints' relative pos in previous frame.  See `class FeatureGenerator` in [lib_feature_proc.py](utils/lib_feature_proc.py). So does the following.
+See `class Tracker` in [lib_tracker.py](https://github.com/Davinderjit01/Fatigue-Action-Detection/blob/master/lib_tracker.py)
+*  Fill in a person's missing joints by these joints' relative pos in previous frame.  See `class FeatureGenerator` in [lib_feature_proc.py](https://github.com/Davinderjit01/Fatigue-Action-Detection/blob/master/lib_feature_proc.py). So does the following.
 *  Add noise to the (x, y) joint positions to try to augment data.
 *  Use a window size of 0.5s (5 frames) to extract features.    
 *  Extract features of (1) body velocity and (2) normalized joint positions and (3) joint velocities.
-*  Apply PCA to reduce feature dimension to 80.  Classify by DNN of 3 layers of 50x50x50 (or switching to other classifiers in one line). See `class ClassifierOfflineTrain` in [lib_classifier.py](utils/lib_classifier.py)
-*  Mean filtering the prediction scores between 2 frames. Add label above the person if the score is larger than 0.8. See `class ClassifierOnlineTest` in [lib_classifier.py](utils/lib_classifier.py)
+*  Apply PCA to reduce feature dimension to 80.  Classify by Linear SVM(Support vector machine). See `class ClassifierOfflineTrain` in [lib_classifier.py](https://github.com/Davinderjit01/Fatigue-Action-Detection/blob/master/lib_classifier.py)
+*  Mean filtering the prediction scores between 2 frames. Add label above the person if the score is larger than 0.8. See `class ClassifierOnlineTest` in [lib_classifier.py](https://github.com/Davinderjit01/Fatigue-Action-Detection/blob/master/lib_classifier.py)
 
 
 
