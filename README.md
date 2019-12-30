@@ -1,5 +1,5 @@
 
-# Multi-person Action recognition-Fatigue detection
+# Fatigue detection
  
 
 
