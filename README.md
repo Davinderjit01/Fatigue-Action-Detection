@@ -7,13 +7,13 @@
 
 
 **Contents:**
-- [1. Algorithm]
-- [2. Install Dependency (OpenPose)]
-- [3. How to run: Inference]
-  * [Introduction]
-  * [Test on video file]
-  * [Test on a folder of images]
-  * [Test on web camera]
+- 1. Algorithm
+- 2. Install Dependency (OpenPose)
+- 3. How to run: Inference
+  * Introduction
+  * Test on video file
+  * Test on a folder of images
+  * Test on web camera
 
 
 
@@ -21,7 +21,6 @@
 # 1. Algorithm
 
 
-We collected videos of 9 Types of actions: `['stand', 'walk', 'run', 'jump', 'sit', 'squat', 'kick', 'fatigue', 'wave']`. The total video lengths are about 20 mins, containing about 10000 video frames recorded at 10 frames per second.
 
 The workflow of the algorithm is:
 *  Get the joints' positions by [OpenPose](https://github.com/ildoonet/tf-pose-estimation).  
@@ -35,6 +34,7 @@ See `class Tracker` in [lib_tracker.py](https://github.com/Davinderjit01/Fatigue
 *  Mean filtering the prediction scores between 2 frames. Add label above the person if the score is larger than 0.8. See `class ClassifierOnlineTest` in [lib_classifier.py](https://github.com/Davinderjit01/Fatigue-Action-Detection/blob/master/lib_classifier.py)
 
 
+We collected videos of 9 Types of actions: `['stand', 'walk', 'run', 'jump', 'sit', 'squat', 'kick', 'fatigue', 'wave']`. The total video lengths are about 20 mins, containing about 10000 video frames recorded at 10 frames per second.
 
 
 
