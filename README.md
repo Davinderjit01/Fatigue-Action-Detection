@@ -7,13 +7,13 @@
 
 
 **Contents:**
-- [1. Algorithm](#1-algorithm)
-- [2. Install Dependency (OpenPose)](#2-install-dependency--openpose-)
-- [3. How to run: Inference](#4-how-to-run--inference)
-  * [Introduction](#introduction)
-  * [Test on video file](#test-on-video-file)
-  * [Test on a folder of images](#test-on-a-folder-of-images)
-  * [Test on web camera](#test-on-web-camera)
+- [1. Algorithm]
+- [2. Install Dependency (OpenPose)]
+- [3. How to run: Inference]
+  * [Introduction]
+  * [Test on video file]
+  * [Test on a folder of images]
+  * [Test on web camera]
 
 
 
